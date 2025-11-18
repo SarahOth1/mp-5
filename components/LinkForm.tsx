@@ -67,6 +67,7 @@ export default function LinkForm(
             </div>
             <div><p className=" p-4 bg-pink-100 text-pink-800 font-serif">{error}</p></div>
             {createdLink && error==="" && <ShortLinkDisplay alias={alias}/> }
+
             {/*<Link href={`/r/${alias}`}>LINK TO URL</Link>*/}
 
         </form>

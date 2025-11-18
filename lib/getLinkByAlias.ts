@@ -5,7 +5,7 @@ import {LinkType} from "@/types/LinkType";
 export default async function getLinkByAlias(
     alias: string,
 
-) : Promise<LinkType | null> {
+) : Promise<string | null> {
     //const postId =ObjectId.createFromHexString(id);
     const linksCollection = await getCollection(LINKS_COLLECTION);
 
@@ -15,10 +15,6 @@ export default async function getLinkByAlias(
         return null;
     }
 
-    return {
-        id: data._id.toString(),
-        linkUrl: data.linkUrl,
-        alias: data.alias,
-    };
+    return data.linkUrl
 
 }
