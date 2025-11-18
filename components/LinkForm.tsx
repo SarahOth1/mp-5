@@ -31,7 +31,7 @@ export default function LinkForm(
                     setCreatedLink(newLink);
                     setError("")
                 } catch (err: any) {
-                    setError(err.message);
+                    setError("Either your URL is invalid or the alias is already taken. Please try again.");
                 }
             }}>
             <TextField

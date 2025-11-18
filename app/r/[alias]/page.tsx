@@ -5,17 +5,17 @@ export default async function LinkPage({params,}: {params: Promise<{alias: strin
     const {alias} =  await params;
     console.log("this is the alias: "+alias);
 
-    // try {
+    try {
         const link = await getLinkByAlias(alias);
         if (link) {
              redirect(link);
         } else {
             redirect("/");
         }
-    // } catch (error) {
-    //     console.error(error);
-    //     return redirect("/");
-    // }
+    } catch (error) {
+        console.error(error);
+        return redirect("/");
+    }
 
 
 
